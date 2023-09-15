@@ -150,6 +150,13 @@
         {
             font-size:medium;
         }
+
+        .details{
+            font-size: x-small;
+           
+           border-right: none;
+        
+        }
     }
 
 
