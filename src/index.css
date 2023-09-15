@@ -155,7 +155,8 @@
             font-size: x-small;
            
            border-right: none;
-        
+         background-color: red;
+         width: 100%;
         }
     }
 
