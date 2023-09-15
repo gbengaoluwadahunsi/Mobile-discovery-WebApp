@@ -91,7 +91,7 @@ const MovieDetails = () => {
 
           </div>
 
-          <div className='m-6 trailer'>
+          <div className='m-6 trailler'>
             <div >
               <div className='text-xl flex flex-col   font-bold  playButton '>
               <FontAwesomeIcon  className = "text-white "  size = "2x" icon = {faCirclePlay} />

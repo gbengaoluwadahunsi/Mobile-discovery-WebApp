@@ -26,7 +26,7 @@ import '../styles.css'
                 </form>              
                 <div className='flex  flex-rows items-center  sign content-center'> 
                 <span className=' pt-2   lg:text-2xl  text-white font-medium sign-in'>Sign In</span>
-                <FontAwesomeIcon className=' p-2 g:p-4 text-xs  lg:text-2xl   ml-2 lg:ml-6 rounded-full bg-rose-700 ' icon={faGripLines} />
+                <FontAwesomeIcon className=' p-2 lg:p-4 text-xs  lg:text-2xl   ml-2 lg:ml-6 rounded-full bg-rose-700 ' icon={faGripLines} />
                 </div>
             </div >
                     
