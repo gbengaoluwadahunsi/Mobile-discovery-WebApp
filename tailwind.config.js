@@ -6,7 +6,7 @@ export default {
   
   theme: {
     extend: {
-      'johnWick-bg': "url('../JohnWick.jpg')"
+      
     },
   },
   plugins: [],

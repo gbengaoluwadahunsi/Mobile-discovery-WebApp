@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
-import image from '../Images/RottenTomatoes (2).png'
+import image from '../Images/rottenTomatoes.png'
 import '../styles.css';
 import  '../index.css'
 
