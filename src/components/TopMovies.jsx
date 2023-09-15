@@ -30,10 +30,7 @@ const TopMovies = () => {
         const topMoviesData = response.data.results.slice(0, 10).map(movie => ({...movie, isTop: true}));
         setTopMovies(topMoviesData);
         setViewingTopTen(true);
-      } else {
-        setTopMovies(response.data.results.slice(10, 20));
-        setViewingTopTen(false);
-      }
+      } 
     } catch (error) {
       console.error('Error fetching top movies:', error);
     } finally {
@@ -41,9 +38,7 @@ const TopMovies = () => {
     }
   };
 
-  const handleSeeMore = () => {
-    setPage(prevPage => prevPage + 1);
-  };
+  
 
   const handleTopTen = () => {
     setPage(1);
@@ -95,7 +90,7 @@ const TopMovies = () => {
         </h2>
         <h3
           className='  ml-10 lg:flex text-red-600 lg:ml-10 lg:pl-16 font-medium lg:text-2xl place-items-center cursor-pointer'
-          onClick={handleSeeMore}>
+          >
           See More <FontAwesomeIcon className='place-items-center ml-1 ' icon={faAngleRight} />
         </h3>
       </div>
