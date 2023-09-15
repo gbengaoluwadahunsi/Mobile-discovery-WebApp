@@ -16,7 +16,7 @@ import '../styles.css'
                 <img src= {image} alt="movie box logo" />
                 <span className='lg:text-4xl  text-white ml-2 pt-4 lg:pt-2 font-bold'>MovieBox</span>
                 </div>
-                <form  className = "rounded-2xl  w-full invisible lg:visible lg:w-2/5   border-2  border-white search"  id="form" role="search">
+                <form  className = "rounded-2xl  w-full  lg:w-2/5   border-2  border-white search"  id="form" role="search">
                 <input type="text" className="text-white"  placeholder='What do you want to watch?'/>
                 <Link to="/moviesearch">
                 <button>
