@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;  
+  }
+
+
+
+form {
+    display: flex;
+  align-content: space-between;
+}
+
+.search  input{
+    all: unset;
+    width: 90%;
+  padding: 10px;
+  color: white;
+  font-size: x-large;
+
+  
+ 
+}  input[type="text"]::placeholder
+{
+    color: white;
+}
+  button {
+    all: unset;
+    cursor: pointer;
+     }
+
+.top-tag {   color: white;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+.footer-content{
+    border : 3px solid red;
+}
+
+.movy {
+    height: 40rem;
+}
+
+
+
+
+
