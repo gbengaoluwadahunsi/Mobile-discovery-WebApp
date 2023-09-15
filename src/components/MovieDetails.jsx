@@ -46,33 +46,33 @@ const MovieDetails = () => {
 
   return (
     <>
-      <div className='flex  flex-col lg:flex-row '>
+      <div className='flex flex-row details '>
 
 
-          <div className=' grow rounded-r-3xl w-1/3 border-r-2 border-gray-400  flex  flex-row lg:flex-col p-6 gap-4 details'>
-              <div  className='flex flex-col lg:flex-row gap-4 p-4'>
+          <div className=' grow rounded-r-3xl w-1/3 border-r-2 border-gray-400  flex flex-col p-6 gap-4 navigation'>
+              <div  className='flex  flex-row gap-4 p-4 oya'>
                 <img className='movie' src= {image} alt="movie box logo rounded-lg" />
                 <span className=' lg:pt-1 font-bold'>MovieBox</span>
                </div>
 
               <Link to={'/'}>               
-              <div className='flex flex-row gap-4  p-4 rounded-lg hover:bg-rose-400'>
+              <div className='flex flex-row gap-4  p-4 rounded-lg hover:bg-rose-400 oya'>
                <img src={image2} alt="home icon" />          
                   <button > HOME</button>
               </div>
               </Link>
 
-              <div className='flex  bg-rose-400  rounded-lg p-4 flex-row gap-4 hover:bg-rose-400' >
+              <div className='flex  bg-rose-400  rounded-lg p-4 flex-row gap-4 hover:bg-rose-400 oya' >
                <img src={image3} alt=" movies icon" />
                 <span>Movies</span>
               </div>
 
-              <div className='flex flex-row gap-4  rounded-lg p-4 hover:bg-rose-400' >
+              <div className='flex flex-row gap-4  rounded-lg p-4 hover:bg-rose-400 oya' >
                 <img src={image4} alt="tv show icon" />
                 <span>TV Series</span>
               </div>
 
-              <div className='flex flex-row rounded-lg p-4 gap-4 hover:bg-rose-400'>
+              <div className='flex flex-row rounded-lg p-4 gap-4 hover:bg-rose-400 oya'>
                 <img src={image5} alt="calender-icon" />
                 <span>Up Coming</span>
               </div>
@@ -83,7 +83,7 @@ const MovieDetails = () => {
                 <button className='text-pink-800 py-1  px-4 bg-rose-200 rounded-full center border-2 play '> Start Playing</button>
               </div>
 
-              <div className='flex flex-row gap-4 rounded-lg p-4 hover:bg-rose-400' >
+              <div className='flex flex-row gap-4 rounded-lg p-4 hover:bg-rose-400 oya' >
                 <img src={image6} alt=" log out icon" />
                 <span>Log Out</span>
               </div>
@@ -91,7 +91,7 @@ const MovieDetails = () => {
 
           </div>
 
-          <div className=' m-6'>
+          <div className='m-6 trailer'>
             <div >
               <div className='text-xl flex flex-col   font-bold  playButton '>
               <FontAwesomeIcon  className = "text-white "  size = "2x" icon = {faCirclePlay} />

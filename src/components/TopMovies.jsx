@@ -118,7 +118,7 @@ const TopMovies = () => {
                   </p>
                 </div>
               
-              <div className='grid grid-cols-3 place-items-center my-4  lg:mx-8'>
+              {/* <div className='grid grid-cols-3 place-items-center my-4  lg:mx-8'>
                   <div className=' lg:mr-10 col-span-2'>
                     <span className='bg-yellow-600   rounded p-1  font-bold text-black' data-testid = 'TMDB-icon'>TMDB</span>
                     <span className=' ml-2 font-semibold' data-testid = 'movie rating'>{`${movie.vote_average* 10} / 100`}</span>
@@ -129,7 +129,7 @@ const TopMovies = () => {
                     <img  className='m-b-10' src={image} alt="Movie rating icon" data-testid = 'TMBD-rotten egg icon' />
                     <span className='font-semibold popular' data-testid = 'movie-popularity'>{`${Math.round(movie.popularity)}%`}</span>
                     </div>
-                </div>
+                </div> */}
             </Link>
           </div>
         ))}

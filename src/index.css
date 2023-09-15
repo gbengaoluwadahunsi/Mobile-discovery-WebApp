@@ -28,7 +28,7 @@
   .playButton {
     position: absolute;
     top : 12rem;
-    left : 35rem;
+    left : 38rem;
 
   }
 
@@ -152,11 +152,32 @@
         }
 
         .details{
+            flex-direction: column;
             font-size: x-small;
            
-           border-right: none;
-         background-color: red;
-         width: 100%;
+           
+          
+        }
+
+        .navigation{
+            flex-direction: row;
+            width: 100%;
+            border-right: none;
+          
+            ;
+        }
+
+        .oya {
+            flex-direction: column;
+        }
+
+        .trailer{
+          
+            margin-left: 8rem;
+            margin-top: 2rem;
+        }
+        span{
+            display: inline;
         }
     }
 
