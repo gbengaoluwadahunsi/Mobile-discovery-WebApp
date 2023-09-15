@@ -11,7 +11,7 @@ import '../styles.css'
  
     return (
         <>
-            <div className='flex   flex-row  justify-between lg:pt-10   content-center '>
+            <div className='flex  flex-col gap-6  lg:flex-row  justify-between lg:pt-10   content-center '>
                 <div className='  flex items-center   content-center'>
                 <img src= {image} alt="movie box logo" />
                 <span className='lg:text-4xl  text-white ml-2 pt-4 lg:pt-2 font-bold'>MovieBox</span>
