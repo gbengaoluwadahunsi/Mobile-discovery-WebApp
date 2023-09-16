@@ -179,6 +179,10 @@
         span{
             display: inline;
         }
+
+        .width{
+            width :20rem;
+        }
     }
 
 

@@ -2,7 +2,7 @@
 import  { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCirclePlay} from '@fortawesome/free-solid-svg-icons';
+import { faCirclePlay, faStar} from '@fortawesome/free-solid-svg-icons';
 import  image from  '../Images/tv.png'
 import  image2 from  '../Images/Home.png'
 import image3 from  '../Images/Movie Projector.png'
@@ -14,6 +14,7 @@ import axios from 'axios';
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
+  const [showFavourite, setShowFavourite] = useState(false)
 
   const  formatToCustomUTC  = (dateString)  =>{
     const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
@@ -43,6 +44,9 @@ const MovieDetails = () => {
   }, [id]);
 
   if (!movie) return <div>Loading...</div>;
+  const handleStarClick = () => {
+    setShowFavourite(!showFavourite);
+  };
 
   return (
     <>
@@ -93,18 +97,20 @@ const MovieDetails = () => {
 
           <div className='m-6 trailler'>
             <div >
+              <button className={`text-xl font-semibold  text-rose-700 ${showFavourite ? '' : 'invisible'}`}>...movie added to favourites</button>
               <div className='text-xl flex flex-col   font-bold  playButton '>
               <FontAwesomeIcon  className = "text-white "  size = "2x" icon = {faCirclePlay} />
               <span className='text-white'>Watch Trailer</span>
               </div>
-              <img className=' w-96 rounded-lg width' src={`https://image.tmdb.org/t/p/w200${movie.backdrop_path}`} alt={movie.title} loading='lazy' data-testid="movie-poster" />
+              <img className='   rounded-lg width' src={`https://image.tmdb.org/t/p/w200${movie.backdrop_path}`} alt={movie.title} loading='lazy' data-testid="movie-poster" />
             </div>
               
-              <div className=' mt-5 font-semibold'>
+              <div className=' mt-5 font-semibold '>
                 <div className='flex flex-row gap-10 font-bold'>
                 <span data-testid="movie-title" > {movie.title}</span>
                 <span  data-testid="movie-release-date"> {formatToCustomUTC(movie.release_date)}</span>
                 <span data-testid="movie-runtime"> {movie.runtime} minutes</span>
+                <FontAwesomeIcon className='text-yellow-300 cursor-pointer'  size ="2x" icon={faStar}   onClick={handleStarClick}/>
                 </div>
 
                 <span className=' mt-2 block text-gray-700 ' data-testid="movie-overview"> {movie.overview}</span>
