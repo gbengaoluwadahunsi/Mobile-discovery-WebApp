@@ -30,7 +30,10 @@ const TopMovies = () => {
         const topMoviesData = response.data.results.slice(0, 10).map(movie => ({...movie, isTop: true}));
         setTopMovies(topMoviesData);
         setViewingTopTen(true);
-      } 
+      } else {
+        setTopMovies(response.data.results.slice(10, 20));
+        setViewingTopTen(false);
+      }
     } catch (error) {
       console.error('Error fetching top movies:', error);
     } finally {
@@ -38,7 +41,9 @@ const TopMovies = () => {
     }
   };
 
-  
+  const handleSeeMore = () => {
+    setPage(prevPage => prevPage + 1);
+  };
 
   const handleTopTen = () => {
     setPage(1);
@@ -47,7 +52,7 @@ const TopMovies = () => {
 
   return (
     <div>
-      <div className="header  px-8  lg:px-14 text-white    bg-no-repeat bg-cover ">
+      <div className="header  px-8  lg:px-14 text-white    bg-no-repeat  bg-cover ">
         
 
         <Header/>
@@ -90,7 +95,7 @@ const TopMovies = () => {
         </h2>
         <h3
           className='  ml-10 lg:flex text-red-600 lg:ml-10 lg:pl-16 font-medium lg:text-2xl place-items-center cursor-pointer'
-          >
+          onClick={handleSeeMore}>
           See More <FontAwesomeIcon className='place-items-center ml-1 ' icon={faAngleRight} />
         </h3>
       </div>
@@ -118,7 +123,19 @@ const TopMovies = () => {
                   </p>
                 </div>
               
-             </Link>
+              <div className='grid grid-cols-3 place-items-center my-4  lg:mx-8'>
+                  <div className=' lg:mr-10 col-span-2'>
+                    <span className='bg-yellow-600   rounded p-1  font-bold text-black' data-testid = 'TMDB-icon'>TMDB</span>
+                    <span className=' ml-2 font-semibold' data-testid = 'movie rating'>{`${movie.vote_average* 10} / 100`}</span>
+                  </div>
+
+
+                  <div className='grid   grid-cols-2 place-items-center  tomato'>
+                    <img  className='m-b-10' src={image} alt="Movie rating icon" data-testid = 'TMBD-rotten egg icon' />
+                    <span className='font-semibold popular' data-testid = 'movie-popularity'>{`${Math.round(movie.popularity)}%`}</span>
+                    </div>
+                </div>
+            </Link>
           </div>
         ))}
       </div>
